@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/azure/static-web-apps-cli/schema",
+  "configurations": {
+    "staticwebdev-vanilla-basic-cli": {
+      "appLocation": "src",
+      "outputLocation": ".",
+      "appName": "stapp-vanilla-basic-cli-swa",
+      "resourceGroup": "rg-vanilla-basic-cli-swa"
+    }
+  }
+}
