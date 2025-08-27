@@ -1,0 +1,26 @@
+{
+  "routes": [
+    {
+      "route": "/test*",
+      "statusCode": 302,
+      "redirect": "/secret.html"
+    },
+    {
+      "route": "/secret.html*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/*",
+      "allowedRoles": ["anonymous"]
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "statusCode": 302,
+      "redirect": "/.auth/login/github"
+    },
+    "404": {
+      "rewrite": "/custom-404.html"
+    }
+  }
+}
